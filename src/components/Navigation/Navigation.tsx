@@ -1,11 +1,19 @@
 import Link from "next/link";
 
+// import "./Navigation.css";
+
 export function Navigation() {
   return (
     <nav className="flex gap-2 absolute top-2 right-4 ">
-      <Link href="/">Home</Link>
-      <Link href="/">Shop</Link>
-      <Link href="/">Find Us</Link>
+      <Link className="text-to-highlight" href="/">
+        Home
+      </Link>
+      <Link className="text-to-highlight" href="/">
+        Shop
+      </Link>
+      <Link className="text-to-highlight" href="/">
+        Find Us
+      </Link>
     </nav>
   );
 }
