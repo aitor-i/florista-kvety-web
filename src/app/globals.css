@@ -25,3 +25,33 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer components {
+  .card {
+    background-color: theme("colors.white");
+    border-radius: theme("borderRadius.lg");
+    padding: theme("spacing.6");
+    box-shadow: theme("boxShadow.xl");
+  }
+  .text-to-highlight:hover::after {
+    content: "";
+    position: relative;
+    top: 2px;
+    height: 2px;
+    width: 100%;
+    animation: underline 0.5s ease;
+    background-color: white;
+  }
+  .text-to-highlight {
+    display: flex;
+    flex-direction: column;
+  }
+  @keyframes underline {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
